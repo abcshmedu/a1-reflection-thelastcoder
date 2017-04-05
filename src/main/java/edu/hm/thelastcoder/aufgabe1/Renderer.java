@@ -10,10 +10,10 @@ public class Renderer {
         this.object = object;
     }
 
-    public String render() {
-        return "";
+   /* public String render() {
+        return ;
     }
-
+*/
 
 
 
