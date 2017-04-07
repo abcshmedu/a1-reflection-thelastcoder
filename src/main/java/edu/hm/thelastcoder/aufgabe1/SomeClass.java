@@ -8,7 +8,7 @@ public class SomeClass {
     @RenderMe
     private int foo;
 
-    @RenderMe(with = "edu.hm.renderer.ArrayRenderer")
+    @RenderMe(with = "edu.hm.thelastcoder.aufgabe1.ArrayRenderer")
     int[] array = {1, 2, 3, };
 
     @RenderMe
