@@ -6,24 +6,30 @@
 package edu.hm.thelastcoder.aufgabe1;
 
 /**
- *
- * @author soich
+ * Class to render an Array.
+ * @author Mark Tripolt
+ * @author Patrick Kuntz
  */
 public class ArrayRenderer {
-    
-    public Object object;
-    public String type = "";
-    
-    public ArrayRenderer(){
+
+    /**
+     * Default Constructor.
+     */
+    public ArrayRenderer() {
     }
-    
-    public String render(int[] array){
+
+    /**
+     *  Method to render int arrays.
+     * @param array with int values.
+     * @return the values of the array.
+     */
+    public String render(int[] array) {
         String result = "[";
-        for(int i = 0; i < array.length; i++){
-            
+        for (int i = 0; i < array.length; i++) {
             result += array[i] + ", ";
         }
-        return result += "]";
+        result += "]";
+        return result;
 
     }
 }

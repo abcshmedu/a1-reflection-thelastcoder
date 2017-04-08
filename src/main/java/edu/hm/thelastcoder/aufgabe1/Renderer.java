@@ -1,6 +1,5 @@
 package edu.hm.thelastcoder.aufgabe1;
 
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -12,14 +11,14 @@ import java.util.logging.Logger;
  */
 public class Renderer {
 
-    public Object object;
+    private Object object;
 
     public Renderer(Object object) {
         this.object = object;
     }
 
     public String render() throws NoSuchFieldException, IllegalAccessException, ClassNotFoundException, NoSuchMethodException, InstantiationException, IllegalArgumentException, InvocationTargetException {
-        Class<?> cut = object.getClass();
+        Class< ? > cut = object.getClass();
         String result = "Instance of " + cut.getCanonicalName() + ":\n";
         Field[] attributes = cut.getDeclaredFields();
         for (Field field : attributes) {
@@ -37,7 +36,7 @@ public class Renderer {
                 String rendi = field.getAnnotation(RenderMe.class).with();
                 result += field.getName() + " (Type " + field.getType().getCanonicalName() + ") ";
 
-                Class<?> cutti = Class.forName(rendi);
+                Class< ? > cutti = Class.forName(rendi);
                 if (cutti != null) {
                     System.out.println("hier");
                     Object specRender = Class.forName(rendi).getConstructor().newInstance();
