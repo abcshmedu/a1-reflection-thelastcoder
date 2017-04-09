@@ -10,7 +10,7 @@ import java.util.*;
  */
 
 public class SomeClass {
-
+    
     @RenderMe
     private int foo;
 
@@ -19,6 +19,15 @@ public class SomeClass {
 
     @RenderMe
     private Date date = new Date(123456789);
+    
+    @RenderMe
+    public static int add() {
+        return 3 + 5;
+    }
+    /**
+     * SomeClass Constructor.
+     * @param foo test variable
+     */
     public SomeClass(int foo) {
         this.foo = foo;
     }

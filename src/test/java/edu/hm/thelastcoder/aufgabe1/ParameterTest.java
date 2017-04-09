@@ -21,7 +21,7 @@ public class ParameterTest {
 
 
     private static final int MAGIC_NUMBER = 42;
-    private static final int RND_NUMBER = (int ) (Math.random()*100000);
+    private static final int RND_NUMBER = (int) (Math.random() * 100000);
     private static final int LEET = 1337;
     private static final int WEIRD_NUMBER = 70;
     private static final int KATUN_NUMBER = 7200;
@@ -45,38 +45,45 @@ public class ParameterTest {
 
                 {MAGIC_NUMBER, "Instance of edu.hm.thelastcoder.aufgabe1.SomeClass:\n"
                         + "foo (Type int): " + MAGIC_NUMBER + "\n"
-                        + "array (Type int[]): [1, 2, 3, ]\n"
-                        + "date (Type java.util.Date): Fri Jan 02 11:17:36 CET 1970\n"},
+                        + "array (Type int[]) [1, 2, 3, ]\n"
+                        + "date (Type java.util.Date): Fri Jan 02 11:17:36 CET 1970\n"
+                        + "add (Type int) 8\n"},
 
                 {Integer.MAX_VALUE, "Instance of edu.hm.thelastcoder.aufgabe1.SomeClass:\n"
                         + "foo (Type int): " + Integer.MAX_VALUE + "\n"
-                        + "array (Type int[]): [1, 2, 3, ]\n"
-                        + "date (Type java.util.Date): Fri Jan 02 11:17:36 CET 1970\n"},
-
+                        + "array (Type int[]) [1, 2, 3, ]\n"
+                        + "date (Type java.util.Date): Fri Jan 02 11:17:36 CET 1970\n"
+                        + "add (Type int) 8\n"},
+                
                 {WEIRD_NUMBER, "Instance of edu.hm.thelastcoder.aufgabe1.SomeClass:\n"
                         + "foo (Type int): " + WEIRD_NUMBER + "\n"
-                        + "array (Type int[]): [1, 2, 3, ]\n"
-                        + "date (Type java.util.Date): Fri Jan 02 11:17:36 CET 1970\n"},
+                        + "array (Type int[]) [1, 2, 3, ]\n"
+                        + "date (Type java.util.Date): Fri Jan 02 11:17:36 CET 1970\n"
+                        + "add (Type int) 8\n"},
 
                 {Integer.MIN_VALUE, "Instance of edu.hm.thelastcoder.aufgabe1.SomeClass:\n"
                         + "foo (Type int): " + Integer.MIN_VALUE + "\n"
-                        + "array (Type int[]): [1, 2, 3, ]\n"
-                        + "date (Type java.util.Date): Fri Jan 02 11:17:36 CET 1970\n"},
+                        + "array (Type int[]) [1, 2, 3, ]\n"
+                        + "date (Type java.util.Date): Fri Jan 02 11:17:36 CET 1970\n"
+                        + "add (Type int) 8\n"},
 
                 {LEET, "Instance of edu.hm.thelastcoder.aufgabe1.SomeClass:\n"
                         + "foo (Type int): " + LEET + "\n"
-                        + "array (Type int[]): [1, 2, 3, ]\n"
-                        + "date (Type java.util.Date): Fri Jan 02 11:17:36 CET 1970\n"},
+                        + "array (Type int[]) [1, 2, 3, ]\n"
+                        + "date (Type java.util.Date): Fri Jan 02 11:17:36 CET 1970\n"
+                        + "add (Type int) 8\n"},
 
                 {RND_NUMBER, "Instance of edu.hm.thelastcoder.aufgabe1.SomeClass:\n"
                         + "foo (Type int): " + RND_NUMBER + "\n"
-                        + "array (Type int[]): [1, 2, 3, ]\n"
-                        + "date (Type java.util.Date): Fri Jan 02 11:17:36 CET 1970\n"},
+                        + "array (Type int[]) [1, 2, 3, ]\n"
+                        + "date (Type java.util.Date): Fri Jan 02 11:17:36 CET 1970\n"
+                        + "add (Type int) 8\n"},
 
                 {KATUN_NUMBER, "Instance of edu.hm.thelastcoder.aufgabe1.SomeClass:\n"
                         + "foo (Type int): " + KATUN_NUMBER + "\n"
-                        + "array (Type int[]): [1, 2, 3, ]\n"
-                        + "date (Type java.util.Date): Fri Jan 02 11:17:36 CET 1970\n"},
+                        + "array (Type int[]) [1, 2, 3, ]\n"
+                        + "date (Type java.util.Date): Fri Jan 02 11:17:36 CET 1970\n"
+                        + "add (Type int) 8\n"},
         });
     }
 
@@ -92,7 +99,7 @@ public class ParameterTest {
      * @throws InstantiationException when an application tries to create an instance of a class using the newInstance method.
      */
     @Test
-    public void testRenderAll() throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, NoSuchFieldException ,IllegalArgumentException, InvocationTargetException, InstantiationException {
+    public void testRenderAll() throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, NoSuchFieldException, IllegalArgumentException, InvocationTargetException, InstantiationException {
         assertEquals(new Renderer(new SomeClass(actual)).render(), expected);
     }
 }
