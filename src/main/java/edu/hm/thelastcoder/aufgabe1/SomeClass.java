@@ -4,7 +4,7 @@ package edu.hm.thelastcoder.aufgabe1;
 import java.util.*;
 
 /**
- *
+ * Some Class.
  * @author Mark Tripolt
  * @author Patrick Kuntz
  */
@@ -19,7 +19,11 @@ public class SomeClass {
 
     @RenderMe
     private Date date = new Date(123456789);
-    
+
+    /**
+     * add Method.
+     * @return 3 + 5;
+     */
     @RenderMe
     public static int add() {
         return 3 + 5;

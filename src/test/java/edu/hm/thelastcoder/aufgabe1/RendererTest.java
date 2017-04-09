@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.hm.thelastcoder.aufgabe1;
 
 
@@ -22,7 +17,7 @@ public class RendererTest {
 
     /**
      * TestCase.
-     * @throws java.lang.Exception throws exceptions if occures
+     * @throws java.lang.Exception throws exceptions if occurs.
      */
     @Test
     public void testRendering() throws Exception {

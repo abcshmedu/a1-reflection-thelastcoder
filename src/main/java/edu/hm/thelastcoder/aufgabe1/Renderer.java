@@ -7,7 +7,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * Renderer Class.
  * @author Mark Tripolt
  * @author Patrick Kuntz
  */
@@ -73,7 +73,7 @@ public class Renderer {
             }
         }
         for (Method method : methodes) {
-            result += method.getName() + " (Type " + method.getReturnType() + ") " + method.invoke(null,null) + "\n";
+            result += method.getName() + " (Type " + method.getReturnType() + ") " + method.invoke(null, null) + "\n";
         }
         return result;
     }
