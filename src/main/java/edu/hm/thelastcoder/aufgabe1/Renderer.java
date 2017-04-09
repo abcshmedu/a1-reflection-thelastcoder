@@ -7,8 +7,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Created by isigoing on 04.04.2017.
+ *
+ * @author Mark Tripolt
+ * @author Patrick Kuntz
  */
+
 public class Renderer {
 
     private Object object;
@@ -34,7 +37,7 @@ public class Renderer {
                 }
             } else {
                 String rendi = field.getAnnotation(RenderMe.class).with();
-                result += field.getName() + " (Type " + field.getType().getCanonicalName() + ") ";
+                result += field.getName() + " (Type " + field.getType().getCanonicalName() + "): ";
 
                 Class< ? > cutti = Class.forName(rendi);
                 if (cutti != null) {
@@ -49,9 +52,10 @@ public class Renderer {
                 }
             }
 
-                System.out.println(result);
+            System.out.println(result);
         }
         return result;
     }
 }
+
 

@@ -1,10 +1,16 @@
 package edu.hm.thelastcoder.aufgabe1;
 
+
+import java.util.*;
+
 /**
- * Created by isigoing on 03.04.2017.
+ *
+ * @author Mark Tripolt
+ * @author Patrick Kuntz
  */
-        import java.util.*;
+
 public class SomeClass {
+
     @RenderMe
     private int foo;
 
